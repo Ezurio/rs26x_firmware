@@ -1,9 +1,9 @@
 schema_version: 1
-latest_release: "0.4.3"
+latest_release: "1.0.0"
 components:
-  rs26x_app: "0.4.3"
-  canvas_fw: "0.4.2"
+  rs26x_app: "1.0.0"
+  canvas_fw: "2.0.1"
   rm1261_fw: "R127.4.1.729"
   rm1262_fw: "R128.4.1.729"
-release_manifest: "releases/0.4.3.yaml"
-updated_at: "2025-01-21"
+release_manifest: "releases/1.0.0.yaml"
+updated_at: "2025-03-12"

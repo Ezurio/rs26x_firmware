@@ -1,0 +1,23 @@
+schema_version: 1
+release_version: "1.0.0"
+release_date: "2025-03-12"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.0/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "1.0.0"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.0/rs2xx_python_app_1.0.0%2B1741815465_signed.zip"
+    sha256: "516dfcf15cc69a9d595fd6467aef349f4316340b8048c296276c2124286cdf71"
+    size_bytes: 64573
+  canvas_fw:
+    version: "2.0.1"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.0/firmware_signed_2.0.1_1741811551.bin"
+    sha256: "b44c45a0e8b70e401ecb943904366bd530c33ce29403b2d3e393401ad8df5fba"
+    size_bytes: 490404
+  rm1261_fw:
+    version: "R127.4.1.729"
+  rm1262_fw:
+    version: "R128.4.1.729"
+
+upgrade:
+  direct_from: ["0.4.2", "0.4.3"]
