@@ -1,0 +1,29 @@
+schema_version: 1
+release_version: "1.0.3"
+release_date: "2025-10-17"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.3/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "1.0.3"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.3/rs2xx_python_app_1.0.3%2B1760637975_signed.zip"
+    sha256: "8cca10fbb44a9e295b3e40e67b783a2d90e99550a37926af3a7876de0444d969"
+    size_bytes: 64684
+  canvas_fw:
+    version: "2.1.0"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.3/build.rs2xx_2.1.0.1755145051_firmware_signed.bin"
+    sha256: "c2761aa846890409f657012617fde3a0073485e7943de73856cd8ec3db220c3d"
+    size_bytes: 490130
+  rm1261_fw:
+    version: "R127.4.1.806"
+  rm1262_fw:
+    version: "R128.4.1.806"
+
+upgrade:
+  direct_from: ["0.4.2", "0.4.3", "1.0.0", "1.0.1", "1.0.2"]
+  component_order:
+    - update: rs26x_app
+      before: canvas_fw
+      constraint: recommended
+      reason: "Avoids data loss during the Canvas 2.0.1 -> 2.1.0 transition."
+
