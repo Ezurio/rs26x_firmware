@@ -1,0 +1,28 @@
+schema_version: 1
+release_version: "1.1.1"
+release_date: "2026-01-21"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.1.1/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "1.1.1"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.1.1/rs2xx_python_app_1.1.1%2B1768940626_signed.zip"
+    sha256: "f05a188333eaf75d35941c0b7870ac7bbebd0d0fe9c5a3068028f8a1e54b3eb3"
+    size_bytes: 64728
+  canvas_fw:
+    version: "2.1.2"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.1.1/build.rs2xx_2.1.2.1768330225_firmware_signed.bin"
+    sha256: "ad89cd65c012c70e5d7df0e467e1b4854630ecc621dae334ea7ec496560b2d28"
+    size_bytes: 500371
+  rm1261_fw:
+    version: "R127.4.1.806"
+  rm1262_fw:
+    version: "R128.4.1.806"
+
+upgrade:
+  direct_from: ["0.4.2", "0.4.3", "1.0.0", "1.0.1", "1.0.2", "1.0.3"]
+  component_order:
+    - update: rs26x_app
+      before: canvas_fw
+      constraint: required
+      reason: "App 1.1.1 is incompatible with Canvas 2.1.0 remaining installed after this release; the app itself does not require Canvas 2.1.2 to function on its own."
