@@ -1,0 +1,28 @@
+schema_version: 1
+release_version: "0.4.3"
+release_date: "2025-01-21"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/0.4.3/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "0.4.3"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/0.4.3/rs2xx_python_app_0.4.3%2B1737476055.zip"
+    sha256: "ee58f0ff3bf01d5b6f2640a3a3518c49a35b78e0bed89463cbd9d9449b5498e9"
+    size_bytes: 60413
+  canvas_fw:
+    version: "0.4.2"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/0.4.3/firmware_signed_0.4.2%2B1732136704.bin"
+    sha256: "435f7f5828a1c7217c6df0c3f04246e021d784566bc838f4c882fc1a97ee8821"
+    size_bytes: 490007
+  rm1261_fw:
+    version: "R127.4.1.729"
+  rm1262_fw:
+    version: "R128.4.1.729"
+
+upgrade:
+  direct_from: ["0.4.2"]
+  component_order:
+    - update: canvas_fw
+      before: rs26x_app
+      constraint: required
+      reason: "Need initial firmware before loading application"

@@ -2,3 +2,6 @@ releases:
   - version: "0.4.2"
     components: { rs26x_app: "0.4.2", canvas_fw: "0.4.2", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
     direct_from: []
+  - version: "0.4.3"
+    components: { rs26x_app: "0.4.3", canvas_fw: "0.4.2", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
+    direct_from: ["0.4.2"]
