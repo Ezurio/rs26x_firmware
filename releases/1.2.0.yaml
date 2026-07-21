@@ -1,0 +1,30 @@
+schema_version: 1
+release_version: "1.2.0"
+release_date: "2026-06-25"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.2.0/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "1.2.0"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.2.0/rs2xx_python_app_1.2.0%2B1782421918_signed.zip"
+    sha256: "00078c3087cb87a65f209a1cf462c1cd90e624fdbc8d7ac23089786dc6103836"
+    size_bytes: 60574
+  canvas_fw:
+    version: "2.1.2"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.2.0/build.rs2xx_2.1.2.1768330225_firmware_signed.bin"
+    sha256: "ad89cd65c012c70e5d7df0e467e1b4854630ecc621dae334ea7ec496560b2d28"
+    size_bytes: 500371
+  rm1261_fw:
+    version: "R127.4.1.806"
+  rm1262_fw:
+    version: "R128.4.1.806"
+
+upgrade:
+  direct_from: ["1.1.1"]
+  requires:
+    canvas_fw: ">=2.1.2"
+    # No component_order entry needed: Canvas doesn't change in this
+    # release, so there's nothing to sequence. This field exists purely
+    # so the tool can verify the precondition before attempting the app
+    # update, and so it's self-documenting rather than implicit in the
+    # release graph.
