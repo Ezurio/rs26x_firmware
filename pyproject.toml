@@ -1,0 +1,15 @@
+[project]
+name = "rs2xx-firmware-release-tests"
+version = "0.1.0"
+description = "Validation tests for RS26x firmware/app release manifests"
+requires-python = ">=3.9"
+dependencies = [
+    "pyyaml>=6.0",
+    "requests>=2.31",
+    "pytest>=7.4",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "network: test performs live HTTP requests against release URLs",
+]
