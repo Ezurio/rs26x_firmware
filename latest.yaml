@@ -1,9 +1,9 @@
-schema_version: 1
+schema_version: 2
 latest_release: "1.2.99"
 components:
   rs26x_app: "1.2.99"
   canvas_fw: "2.1.2"
-  rm1261_fw: "R127.4.1.806"
-  rm1262_fw: "R128.4.1.806"
+  rm1261_fw: "127.4.1.806"
+  rm1262_fw: "128.4.1.806"
 release_manifest: "releases/1.2.99.yaml"
 updated_at: "2026-10-21"

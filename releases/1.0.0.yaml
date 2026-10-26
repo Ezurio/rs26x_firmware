@@ -1,4 +1,4 @@
-schema_version: 1
+schema_version: 2
 release_version: "1.0.0"
 release_date: "2025-03-12"
 notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.0.0/RELEASE_NOTES.md"
@@ -15,9 +15,11 @@ components:
     sha256: "b44c45a0e8b70e401ecb943904366bd530c33ce29403b2d3e393401ad8df5fba"
     size_bytes: 490404
   rm1261_fw:
-    version: "R127.4.1.729"
+    version: "127.4.1.729"
   rm1262_fw:
-    version: "R128.4.1.729"
+    version: "128.4.1.729"
 
 upgrade:
   direct_from: ["0.4.2", "0.4.3"]
+  # Complete update order. Tools follow it as written.
+  component_order: [rs26x_app, canvas_fw, rm1261_fw, rm1262_fw]

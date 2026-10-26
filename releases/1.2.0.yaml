@@ -1,4 +1,4 @@
-schema_version: 1
+schema_version: 2
 release_version: "1.2.0"
 release_date: "2026-06-25"
 notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.2.0/RELEASE_NOTES.md"
@@ -15,16 +15,16 @@ components:
     sha256: "ad89cd65c012c70e5d7df0e467e1b4854630ecc621dae334ea7ec496560b2d28"
     size_bytes: 500371
   rm1261_fw:
-    version: "R127.4.1.806"
+    version: "127.4.1.806"
   rm1262_fw:
-    version: "R128.4.1.806"
+    version: "128.4.1.806"
 
 upgrade:
   direct_from: ["1.1.1"]
+  # Complete update order. Tools follow it as written.
+  component_order: [rs26x_app, canvas_fw, rm1261_fw, rm1262_fw]
+  # Informational only; update tools must not read this. Every release in
+  # direct_from already ships a component set that satisfies it, and the
+  # tests verify that.
   requires:
     canvas_fw: ">=2.1.2"
-    # No component_order entry needed: Canvas doesn't change in this
-    # release, so there's nothing to sequence. This field exists purely
-    # so the tool can verify the precondition before attempting the app
-    # update, and so it's self-documenting rather than implicit in the
-    # release graph.

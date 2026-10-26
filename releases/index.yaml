@@ -1,29 +1,30 @@
+schema_version: 2
 releases:
   - version: "0.4.2"
-    components: { rs26x_app: "0.4.2", canvas_fw: "0.4.2", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
+    components: { rs26x_app: "0.4.2", canvas_fw: "0.4.2", rm1261_fw: "127.4.1.729", rm1262_fw: "128.4.1.729" }
     direct_from: []
   - version: "0.4.3"
-    components: { rs26x_app: "0.4.3", canvas_fw: "0.4.2", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
+    components: { rs26x_app: "0.4.3", canvas_fw: "0.4.2", rm1261_fw: "127.4.1.729", rm1262_fw: "128.4.1.729" }
     direct_from: ["0.4.2"]
   - version: "1.0.0"
-    components: { rs26x_app: "1.0.0", canvas_fw: "2.0.1", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
+    components: { rs26x_app: "1.0.0", canvas_fw: "2.0.1", rm1261_fw: "127.4.1.729", rm1262_fw: "128.4.1.729" }
     direct_from: ["0.4.2", "0.4.3"]
   - version: "1.0.1"
-    components: { rs26x_app: "1.0.1", canvas_fw: "2.0.1", rm1261_fw: "R127.4.1.729", rm1262_fw: "R128.4.1.729" }
+    components: { rs26x_app: "1.0.1", canvas_fw: "2.0.1", rm1261_fw: "127.4.1.729", rm1262_fw: "128.4.1.729" }
     direct_from: ["0.4.2", "0.4.3", "1.0.0"]
   - version: "1.0.2"
-    components: { rs26x_app: "1.0.2", canvas_fw: "2.0.1", rm1261_fw: "R127.4.1.806", rm1262_fw: "R128.4.1.806" }
+    components: { rs26x_app: "1.0.2", canvas_fw: "2.0.1", rm1261_fw: "127.4.1.806", rm1262_fw: "128.4.1.806" }
     direct_from: ["0.4.2", "0.4.3", "1.0.0", "1.0.1"]
   - version: "1.0.3"
-    components: { rs26x_app: "1.0.3", canvas_fw: "2.1.0", rm1261_fw: "R127.4.1.806", rm1262_fw: "R128.4.1.806" }
+    components: { rs26x_app: "1.0.3", canvas_fw: "2.1.0", rm1261_fw: "127.4.1.806", rm1262_fw: "128.4.1.806" }
     direct_from: ["0.4.2", "0.4.3", "1.0.0", "1.0.1", "1.0.2"]
   - version: "1.1.1"
-    components: { rs26x_app: "1.1.1", canvas_fw: "2.1.2", rm1261_fw: "R127.4.1.806", rm1262_fw: "R128.4.1.806" }
+    components: { rs26x_app: "1.1.1", canvas_fw: "2.1.2", rm1261_fw: "127.4.1.806", rm1262_fw: "128.4.1.806" }
     direct_from: ["0.4.2", "0.4.3", "1.0.0", "1.0.1", "1.0.2", "1.0.3"]
   - version: "1.2.0"
-    components: { rs26x_app: "1.2.0", canvas_fw: "2.1.2", rm1261_fw: "R127.4.1.806", rm1262_fw: "R128.4.1.806" }
+    components: { rs26x_app: "1.2.0", canvas_fw: "2.1.2", rm1261_fw: "127.4.1.806", rm1262_fw: "128.4.1.806" }
     direct_from: ["1.1.1"]
   - version: "1.2.99"
-    components: { rs26x_app: "1.2.99", canvas_fw: "2.1.2", rm1261_fw: "R127.4.1.806", rm1262_fw: "R128.4.1.806" }
+    components: { rs26x_app: "1.2.99", canvas_fw: "2.1.2", rm1261_fw: "127.4.1.806", rm1262_fw: "128.4.1.806" }
     app_capabilities: ["rm126x_ota"]
     direct_from: ["1.1.1", "1.2.0"]
