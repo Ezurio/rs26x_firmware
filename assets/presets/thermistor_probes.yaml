@@ -1,0 +1,10 @@
+# Probe preset list loaded by the RS26x application. The built-in
+# "Custom" entry is always first. Entries here replace the built-in
+# thermistor presets. Coefficients are Steinhart-Hart A, B and C.
+# Names must be unique.
+schema_version: 1
+presets:
+  - name: "Thermistor Probe (PN:133-00016) below 25°C (Default)"
+    coefficients: { A: 1.156e-3, B: 2.290e-4, C: 1.120e-7 }
+  - name: "Thermistor Probe (PN:133-00016) above 25°C"
+    coefficients: { A: 1.1575e-3, B: 2.274e-4, C: 1.2948e-7 }
