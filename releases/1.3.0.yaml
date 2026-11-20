@@ -1,0 +1,39 @@
+schema_version: 2
+release_version: "1.3.0"
+release_date: "2026-11-20"
+notes_url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.3.0/RELEASE_NOTES.md"
+
+components:
+  rs26x_app:
+    version: "1.3.0"
+    # First app release able to update the RM126x over the air.
+    capabilities: ["rm126x_ota"]
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.3.0/rs2xx_python_app_1.3.0+1795190341_signed.zip"
+    sha256: "1a2623109ab33cacf0bfc77619aedea9b3e5d451d6d1bcf758ce122b3e61087e"
+    size_bytes: 67737
+  canvas_fw:
+    version: "2.1.2"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.3.0/build.rs2xx_2.1.2.1768330225_firmware_signed.bin"
+    sha256: "ad89cd65c012c70e5d7df0e467e1b4854630ecc621dae334ea7ec496560b2d28"
+    size_bytes: 500371
+  # First release to ship OTA-capable RM126x binaries.
+  rm1261_fw:
+    version: "127.4.1.869"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.3.0/480-00214-R127.4.1.869.bin"
+    sha256: "123aa836d49aa2246c9bcda2ba588be68e5c5d16fe6cfc23dd7bdd51d677a300"
+    size_bytes: 227800
+  rm1262_fw:
+    version: "128.4.1.869"
+    url: "https://raw.githubusercontent.com/Ezurio/rs26x_firmware/refs/heads/main/releases/1.3.0/480-00215-R128.4.1.869.bin"
+    sha256: "c30e824c5b76d9738322517cd404de83437ca043092b8542f685eb1e3496bc9c"
+    size_bytes: 229468
+
+upgrade:
+  direct_from: ["1.1.1", "1.2.0"]
+  # Complete update order. Tools follow it as written.
+  component_order: [rs26x_app, canvas_fw, rm1261_fw, rm1262_fw]
+  # Informational only; update tools must not read this. Every release in
+  # direct_from already ships a component set that satisfies it, and the
+  # tests verify that.
+  requires:
+    canvas_fw: ">=2.1.2"
